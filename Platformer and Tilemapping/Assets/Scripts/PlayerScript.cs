@@ -61,27 +61,34 @@ public class PlayerScript : MonoBehaviour
         rd2d.AddForce(new Vector2(hozMovement * speed, vertMovement * speed));
         isOnGround = Physics2D.OverlapCircle(groundcheck.position, checkRadius, allGround);
 
-        if (hozMovement == 0.0 && livesValue > 0 && !isDead)
+        if (hozMovement == 0.0 && livesValue > 0 && !isDead && isOnGround)
         {
           anim.SetInteger("State", 0);
         }
 
         if (hozMovement > 0.0 && livesValue > 0 && !isDead)
         {
-          anim.SetInteger("State", 1);
-          if (!rightFace)
-          {
-            Flip();
-          }
-         }
+            if (isOnGround)
+            {
+                anim.SetInteger("State", 1);
+            }
+            if (!rightFace)
+            {
+                Flip();
+            }
+        }
 
         if (hozMovement < 0.0 && livesValue > 0 && !isDead)
         {
-          anim.SetInteger("State", 1);
-          if (rightFace)
-          {
-            Flip();
-          }
+            if (isOnGround)
+            {
+                anim.SetInteger("State", 1);
+            }
+      
+            if (rightFace)
+            {
+                Flip();
+            }
          }
 
         anim.SetBool("Airborne", !isOnGround);
@@ -136,8 +143,6 @@ public class PlayerScript : MonoBehaviour
             Destroy(collision.collider.gameObject);
             livesValue--;
             lives.text = "Lives: " + livesValue.ToString();
-
-            isOnGround = false;
 
             anim.SetInteger("State", 6);
             effectSource.clip = hurtSound;

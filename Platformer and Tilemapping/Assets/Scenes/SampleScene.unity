@@ -503,7 +503,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122377853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.505, y: 0.413, z: 0}
+  m_LocalPosition: {x: 0, y: 0.413, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -576,7 +576,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.08225602}
+  m_Offset: {x: -0.0003001839, y: 0.07102992}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -587,7 +587,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.19, y: 0.23548794}
+  m_Size: {x: 0.1333805, y: 0.25794014}
   m_EdgeRadius: 0
 --- !u!95 &122377859
 Animator:
@@ -622,9 +622,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01, y: -0.1}
+  m_Offset: {x: 0, y: -0.108}
   serializedVersion: 2
-  m_Radius: 0.10807976
+  m_Radius: 0.0970906
 --- !u!82 &122377861
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3712,7 +3712,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.4041905
+  orthographic size: 2.0429168
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3736,7 +3736,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3757,7 +3757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 122377855}
-  yOffset: 1
+  yOffset: 0.7
   FollowSpeed: 50
 --- !u!82 &519420034
 AudioSource:
@@ -3779,7 +3779,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.0451686
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
